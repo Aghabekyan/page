@@ -5,7 +5,7 @@
     "main": "./dist/index",
     "types": "./dist/index",
     "scripts": {
-        "start": "set DEBUG=index && nodemon --watch src/**/*.ts --ignore src/**/*.spec.ts --exec ts-node src/index.ts"
+        "start": "nodemon --watch src/ --exec 'ts-node src/index.ts' --verbose -e ts"
     },
     "author": "Gevorg Ghazaryan",
     "license": "ISC",

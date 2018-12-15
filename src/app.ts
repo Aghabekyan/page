@@ -16,19 +16,7 @@ const config = require('./config/config.json')['development'];
 
 /** Here we are importing all necessary routes for our application */
 
-import MainRouter from './routes/mainRouter';
-import AuthenticateRouter from './routes/authenticate';
-import AdminsRouter from './routes/admins';
-import SeoRouter from './routes/seo';
 import CategoriesRouter from './routes/categories';
-import UploadRouter from './routes/upload';
-import ArticlesRouter from './routes/articles';
-import TaskManagerRouter from './routes/task-manager';
-import MessengerRouter from './routes/messenger';
-import NotificationsRouter from './routes/notifications';
-import CustomizeRouter from './routes/customize';
-import AnalyticsRouter from './routes/analytics';
-import BugReportRouter from './routes/bug-report';
 
 
 
@@ -74,14 +62,14 @@ class App {
         */
         createConnection().then(connection => {
 
-            // this.express.use('/api/categories', CategoriesRouter);
-            //
-            // this.express.use('*', (req, res) => {
-            //     return res.json({
-            //         message: 'Welcome to Pages API. Page not found or something went wrong.',
-            //         status: 401
-            //     });
-            // });
+            this.express.use('/api/categories', CategoriesRouter);
+
+            this.express.use('*', (req, res) => {
+                return res.json({
+                    message: 'Welcome to Pages API. Page not found or something went wrong.',
+                    status: 401
+                });
+            });
         })
         .catch(error => {
             console.log("TypeORM connection error: ", error)
