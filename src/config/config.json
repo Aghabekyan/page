@@ -10,25 +10,26 @@
 			"password": "pass",
 			"database": "page",
 			"host": "127.0.0.1",
+			"port": "5433",
 			"dialect": "postgres"
 		}
 	},
-	"production": {
-		"dir": {
-			"origin": "http://127.0.0.1:3000",
-			"uploads": "http://127.0.0.1:3000/uploads",
-			"allowed_domains": "http://127.0.0.1:4200"
-		},
-		"database": {
-			"username": "postgres",
-			"password": "1331128",
-			"database": "yerevannews",
-			"host": "127.0.0.1",
-			"dialect": "postgres"
-		}
-	},
-	"secret": {
-		"API": "2Xs_&62336%X",
-		"users": "Gtefe_&%62336%X"
-	}
+//	"production": {
+//		"dir": {
+//			"origin": "http://127.0.0.1:3000",
+//			"uploads": "http://127.0.0.1:3000/uploads",
+//			"allowed_domains": "http://127.0.0.1:4200"
+//		},
+//		"database": {
+//			"username": "postgres",
+//			"password": "1331128",
+//			"database": "yerevannews",
+//			"host": "127.0.0.1",
+//			"dialect": "postgres"
+//		}
+//	},
+//	"secret": {
+//		"API": "2Xs_&62336%X",
+//		"users": "Gtefe_&%62336%X"
+//	}
 }

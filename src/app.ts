@@ -12,7 +12,7 @@ import { createConnection } from "typeorm";
 /** TypeORM Connection */
 
 const ENV = process.env.NODE_ENV || 'development';
-const config = require('./config/config.json')[ENV];
+const config = require('./config/config.json')['development'];
 
 /** Here we are importing all necessary routes for our application */
 
