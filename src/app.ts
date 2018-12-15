@@ -74,26 +74,14 @@ class App {
         */
         createConnection().then(connection => {
 
-            this.express.use('/api/authenticate', AuthenticateRouter);
-            this.express.use('/api/main', MainRouter);
-            this.express.use('/api/admins', AdminsRouter);
-            this.express.use('/api/seo', SeoRouter);
-            this.express.use('/api/categories', CategoriesRouter);
-            this.express.use('/api/upload', UploadRouter);
-            this.express.use('/api/article', ArticlesRouter);
-            this.express.use('/api/task-manager', TaskManagerRouter);
-            this.express.use('/api/messenger', MessengerRouter);
-            this.express.use('/api/notifications', NotificationsRouter);
-            this.express.use('/api/customize', CustomizeRouter);
-            this.express.use('/api/analytics', AnalyticsRouter);
-            this.express.use('/api/bug-report', BugReportRouter);
-
-            this.express.use('*', (req, res) => {
-                return res.json({
-                    message: 'Welcome to Yerevannews.am API. Page not found or something went wrong.',
-                    status: 401
-                });
-            });
+            // this.express.use('/api/categories', CategoriesRouter);
+            //
+            // this.express.use('*', (req, res) => {
+            //     return res.json({
+            //         message: 'Welcome to Pages API. Page not found or something went wrong.',
+            //         status: 401
+            //     });
+            // });
         })
         .catch(error => {
             console.log("TypeORM connection error: ", error)
