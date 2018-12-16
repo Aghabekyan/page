@@ -1,7 +1,9 @@
-import { Entity, Column, PrimaryGeneratedColumn} from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, Tree, TreeChildren,
+TreeParent} from "typeorm";
 
 
 @Entity()
+@Tree("materialized-path")
 export class Categories {
 
     @PrimaryGeneratedColumn()
@@ -9,5 +11,12 @@ export class Categories {
 
     @Column()
     name!: string;
+
+
+    @TreeChildren()
+    children!: Categories[];
+
+    @TreeParent()
+    parent!: Categories;
 
 }
