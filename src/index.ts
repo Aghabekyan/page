@@ -19,7 +19,7 @@ server.on('listening', onListening);
 /* -------------------------------------------------- */
 
 function onError(error: NodeJS.ErrnoException): void {
-    console.log("ERRRRRRRRRRoooooooor")
+    console.log("Eroooooooorr")
 }
 
 function onListening(): void {
